@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Adoption Form</title>
+
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+<div class="container">
+    <h2>Dog Adoption Form</h2>
+
+    <form>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Name">
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" placeholder="Phone Number">
+
+        <label for="address">Address</label>
+        <input type="text" id="address" placeholder="Address">
+
+        <div class="checkbox-group">
+            <input type="checkbox" id="checkbox" value="Have you ever lived with a Dog before?">
+            <label for="checkbox">Have you ever lived with a Dog before?</label>
+        </div>
+
+        <label for="multiSelect">Please select your preferred breeds</label>
+        <select id="multiSelect" multiple>
+            <option>Labrador</option>
+            <option>German Shepherd</option>
+            <option>Golden Retriever</option>
+            <option>Beagle</option>
+        </select>
+
+        <input type="submit" value="Submit">
+
+    </form>
+</div>
 
 </body>
-
 </html>
