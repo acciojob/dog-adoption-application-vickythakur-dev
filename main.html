@@ -1,45 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dog Adoption Form</title>
+  <meta charset="UTF-8">
+  <title>Dog Adoption Application</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
+    body {
+      background-color: #f0f4f8;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    .form-container {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+      padding: 40px;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .form-container h1 {
+      text-align: center;
+      color: #2c3e50;
+      font-size: 26px;
+      margin-bottom: 6px;
+    }
+
+    .form-container p.subtitle {
+      text-align: center;
+      color: #7f8c8d;
+      font-size: 14px;
+      margin-bottom: 28px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: #34495e;
+      margin-bottom: 6px;
+    }
+
+    .form-group input[type="text"],
+    .form-group select {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+      color: #2c3e50;
+      background-color: #fafafa;
+      transition: border-color 0.3s;
+      outline: none;
+    }
+
+    .form-group input[type="text"]:focus,
+    .form-group select:focus {
+      border-color: #3498db;
+      background-color: #fff;
+    }
+
+    .form-group select[multiple] {
+      height: 110px;
+      padding: 6px 10px;
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: #3498db;
+      cursor: pointer;
+    }
+
+    .checkbox-group label {
+      font-size: 14px;
+      color: #34495e;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      color: #ffffff;
+      font-size: 16px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 6px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
-    <h2>Dog Adoption Form</h2>
+  <div class="form-container">
+    <h1>🐶 Dog Adoption</h1>
+    <p class="subtitle">Fill out the form below to apply for adoption</p>
 
     <form>
-
+      <div class="form-group">
         <label for="name">Name</label>
         <input type="text" id="name" placeholder="Name">
+      </div>
 
+      <div class="form-group">
         <label for="phone">Phone Number</label>
         <input type="text" id="phone" placeholder="Phone Number">
+      </div>
 
+      <div class="form-group">
         <label for="address">Address</label>
         <input type="text" id="address" placeholder="Address">
+      </div>
 
-        <div class="checkbox-group">
-            <input type="checkbox" id="checkbox" value="Have you ever lived with a Dog before?">
-            <label for="checkbox">Have you ever lived with a Dog before?</label>
-        </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="checkbox" value="Have you ever lived with a Dog before?">
+        <label for="checkbox">Have you ever lived with a Dog before?</label>
+      </div>
 
-        <label for="multiSelect">Please select your preferred breeds</label>
+      <div class="form-group">
+        <label for="multiSelect">Preferred Breeds</label>
         <select id="multiSelect" multiple>
-            <option>Labrador</option>
-            <option>German Shepherd</option>
-            <option>Golden Retriever</option>
-            <option>Beagle</option>
+          <option value="labrador">Labrador Retriever</option>
+          <option value="golden_retriever">Golden Retriever</option>
+          <option value="bulldog">Bulldog</option>
+          <option value="poodle">Poodle</option>
+          <option value="beagle">Beagle</option>
         </select>
+      </div>
 
-        <input type="submit" value="Submit">
-
+      <input type="submit" id="submit" value="Submit">
     </form>
-</div>
+  </div>
 
 </body>
 </html>
+
